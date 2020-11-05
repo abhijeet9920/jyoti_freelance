@@ -44,30 +44,17 @@
                                     <p>Dashboard</p>
                                 </a>
                             </li>
-                            <li class="nav-item has-treeview">
-                                <a href="javascript:void" class="nav-link">
-                                    <i class="nav-icon far fa-envelope"></i>
-                                    <p>
-                                        Reports
-                                        <i class="fas fa-angle-left right"></i>
-                                    </p>
+                            <li class="nav-item">
+                                <a href="{{ url('/orders') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Orders</p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="{{ url('/orders') }}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Orders</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="{{ url('/orders/upload') }}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Upload Excel</p>
-                                        </a>
-                                    </li>
-                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('/orders/upload') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Upload Excel</p>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('/users')}}" class="nav-link">
@@ -102,8 +89,8 @@
             <aside class="control-sidebar control-sidebar-dark">
             </aside>
         </div>
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="{{ url('/plugins/jquery/jquery.min.js') }}"></script>
+        <script src="{{ url('/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
         <script>
             $.widget.bridge('uibutton', $.ui.button)
         </script>
