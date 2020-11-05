@@ -18,3 +18,5 @@ Route::get('/', 'HomeController@loadBase');
 Route::get('/dashboard', 'HomeController@loadBase')->name('home');
 Route::get('/users', 'HomeController@loadUsers');
 Route::get('/orders', 'OrderController@index');
+Route::get('/orders/upload', 'OrderController@uploadScreen');
+Route::post('/orders/upload', 'OrderController@postUpload');

@@ -59,6 +59,14 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ url('/orders/upload') }}" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Upload Excel</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('/users')}}" class="nav-link">
@@ -112,5 +120,6 @@
         <script src="{{ url('/js/adminlte.js') }}"></script>
         <script src="{{ url('/js/pages/dashboard.js') }}"></script>
         <script src="{{ url('/js/demo.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>
