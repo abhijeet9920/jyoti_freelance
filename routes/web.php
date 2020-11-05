@@ -20,3 +20,4 @@ Route::get('/users', 'HomeController@loadUsers');
 Route::get('/orders', 'OrderController@index');
 Route::get('/orders/upload', 'OrderController@uploadScreen');
 Route::post('/orders/upload', 'OrderController@postUpload');
+Route::get('/ajax/orders/json', 'OrderController@loadOrdersJSON');

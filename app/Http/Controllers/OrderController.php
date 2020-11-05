@@ -28,8 +28,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Orders::paginate(10);
-        return view('orders', compact('orders'));
+        return view('orders',);
     }
 
 
@@ -51,6 +50,13 @@ class OrderController extends Controller
         $filemove = storage_path() . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $filename;
         Excel::import(new OrderImport, $filemove);
         return redirect('orders');
+    }
+
+
+
+    public function loadOrdersJSON(Request $request)
+    {
+        return datatables()->of(Orders::all())->toArray();
     }
 
 }

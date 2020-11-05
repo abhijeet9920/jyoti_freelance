@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('css')
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+@endsection
 @section('content')
 <div class="container">
     <div class="content-header">
@@ -16,8 +19,8 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body table-responsive no-padding">
-                    <table class="table table-hover">
-                        <tbody>
+                    <table class="table table-hover" id="orders">
+                        <thead>
                             <tr>
                                 <th>Building Name</th>
                                 <th>Order Number</th>
@@ -28,7 +31,7 @@
                                 <th>Last Name Billing</th>
                                 <th>Company Billing</th>
                             </tr>
-                        </tbody>
+                        </thead>
                     </table>
                 </div>
                 <!-- /.box-body -->
@@ -39,4 +42,24 @@
 </section>
 @endsection
 @section('scripts')
+<script src="{{ url('/plugins/datatables/jquery.dataTables.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#orders').DataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax": "ajax/orders/json",
+            "columns": [
+                {"data":"Building_Name"},
+                {"data":"Order_Number"},
+                {"data":"Order_Status"},
+                {"data":"Order_Date"},
+                {"data":"Customer_Note"},
+                {"data":"First_Name_Billing"},
+                {"data":"Last_Name_Billing"},
+                {"data":"Company_Billing"},
+            ]
+        });
+    });
+</script>
 @endsection
