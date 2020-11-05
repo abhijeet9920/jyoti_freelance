@@ -17,3 +17,4 @@ Auth::routes();
 Route::get('/', 'HomeController@loadBase');
 Route::get('/dashboard', 'HomeController@loadBase')->name('home');
 Route::get('/users', 'HomeController@loadUsers');
+Route::get('/orders', 'OrderController@index');

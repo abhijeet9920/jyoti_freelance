@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AdminLTE 3 | Dashboard</title>
+        <title>AdminLTE 3 </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ url('plugins/fontawesome-free/css/all.min.css') }}">
@@ -69,7 +69,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    <i class="nav-icon fas fa-sign-out"></i>
+                                    <i class="nav-icon fas fa-sign-out-alt"></i>
                                     <p>Logout</p>
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
